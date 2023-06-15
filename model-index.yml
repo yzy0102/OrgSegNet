@@ -1,0 +1,12 @@
+Import:
+- configs/danet/metafile.yaml
+- configs/deeplabv3plus/metafile.yaml
+- configs/dnlnet/metafile.yaml
+- configs/fcn/metafile.yaml
+- configs/isanet/metafile.yaml
+- configs/nonlocal_net/metafile.yaml
+- configs/pspnet/metafile.yaml
+- configs/swin/metafile.yaml
+- configs/unet/metafile.yaml
+- configs/upernet/metafile.yaml
+- configs/vit/metafile.yaml

@@ -1,0 +1,16 @@
+cityscapesscripts
+nibabel
+ttach
+tqdm
+scikit-learn
+scipy
+opencv-python
+Shapely==1.8.5
+scikit-image
+pandas
+networkx
+pickleshare
+numpy
+Pillow
+matplotlib
+pytesseract
