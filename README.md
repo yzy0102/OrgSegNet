@@ -55,7 +55,7 @@ or run this code below:
 !wget https://drive.google.com/file/d/12TYv8mEUWdVqjrfbrKZK_OtcV5pq6ejr/view?usp=drive_link -P ../checkpoints
 
 ```
-<b>As the official data set increases, the pre-trained model will be iterated gradually</b>
+<b>As the official data set increases, the pre-trained model will be iterated gradually</b>.
 
 
 </br>
@@ -73,3 +73,4 @@ Please cite the following paper when using OrgSegNet:
 ```
 Xuping Feng, Zeyu Yu, Hui Fang et al. Plantorgan hunter: a deep learning-based framework for quantitative profiling plant subcellular morphology, 12 July 2022, PREPRINT (Version 1) available at Research Square [https://doi.org/10.21203/rs.3.rs-1811819/v1]
 ```
+Citation information will be updated after the paper is published.
