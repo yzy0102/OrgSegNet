@@ -141,7 +141,7 @@ default_hooks = dict(
 ```
 
 ## Create and Modify a general config for a model
-Let's see [OrgSeg_PlantCell_768x512.py](configs\OrgSegNet\OrgSeg_PlantCell_768x512.py)
+Let's see [OrgSeg_PlantCell_768x512.py](.../configs\OrgSegNet\OrgSeg_PlantCell_768x512.py)
 
 In fact, one just need to combine the module configs needed in the _base_ and make the desired changes on top of them to create a config that can be used for training
 

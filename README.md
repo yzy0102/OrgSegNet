@@ -43,9 +43,11 @@ We provide a training demo on jupyter notebook [Train_OrgSegNet_demo](./demo/Tra
 - [Test the dataset using the trained model(checkpoint)](markdowns/TestData.md)
 - [Instance generation based class activation map (CAM)](markdowns/GenerateCAM.md)
 - [Web implementation](markdowns/TestData.md)
-- [OrgSegNet code architecture](markdowns/Architecture.md)
+- [OrgSegNet code architecture and related guides](markdowns/Architecture.md)
 
 ## <div id ='pretrained'> Pretrained checkpoint </div>
+
+
 
 
 The pretrained checkpoint can be downloaded from the [google drive link](https://drive.google.com/file/d/12TYv8mEUWdVqjrfbrKZK_OtcV5pq6ejr/view?usp=drive_link), 
@@ -55,7 +57,11 @@ or run this code below:
 !wget https://drive.google.com/file/d/12TYv8mEUWdVqjrfbrKZK_OtcV5pq6ejr/view?usp=drive_link -P ../checkpoints
 
 ```
+
 <b>As the official data set increases, the pre-trained model will be iterated gradually</b>.
+
+
+
 
 
 </br>
