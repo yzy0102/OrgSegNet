@@ -140,3 +140,5 @@ default_hooks = dict(
 
 ```
 
+## Create and Modify a general config for a model
+Let's see [OrgSeg_PlantCell_768x512.py](configs\OrgSegNet\OrgSeg_PlantCell_768x512.py)
