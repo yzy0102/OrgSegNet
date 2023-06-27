@@ -7,7 +7,7 @@ In configs, note that "_base_" is the config base for all models, containing:
 
 
 ## datasets config
-We create the Plant Cell organelle dataset config for training OrgSegNet. 
+We create the [Plant Cell organelle dataset config](../../configs/_base_/datasets/PlantCell_768x512.py) for training OrgSegNet. 
 
 Preprocessing information about the training process is stored here.
 
@@ -22,7 +22,7 @@ We can also see "train_dataloader", "test_dataloader", "val_dataloader". These d
 ## models config
 The config of the model structure and parameters is saved in each corresponding file.
 
-Let's take OrgSegNet.py as an example
+Let's take [OrgSegNet.py](../../configs/_base_/models/OrgSegNet.py) as an example
 
 1. First, we set the norm_cfg for the model training, SyncBN for multi-gpus and BN for single GPU. Then a data preprocessor is applied to normalize the RGB information of the image.
     ```
@@ -105,7 +105,7 @@ Let's take OrgSegNet.py as an example
 ## schedules config
 Early deep learning models generally used epoch to control the training flow, but our OrgSegNet and MMsegmentation recommend using iteration to define the training flow. Iteration control will be more flexible than epoch control, it should be noted that the two can be converted to each other.
 
-Let's see schedule_160k.py as an example.
+Let's see [schedule_160k.py](../../configs/_base_/schedules/schedule_160k.py) as an example.
 
 ```
 # optimizer
@@ -141,7 +141,7 @@ default_hooks = dict(
 ```
 
 ## Create and Modify a general config for a model
-Let's see [OrgSeg_PlantCell_768x512.py](.../configs\OrgSegNet\OrgSeg_PlantCell_768x512.py)
+Let's see [OrgSeg_PlantCell_768x512.py](../../configs/OrgSegNet/OrgSeg_PlantCell_768x512.py)
 
 In fact, one just need to combine the module configs needed in the _base_ and make the desired changes on top of them to create a config that can be used for training
 
