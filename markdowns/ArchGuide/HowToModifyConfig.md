@@ -71,7 +71,11 @@ Let's take OrgSegNet.py as an example
             norm_cfg=norm_cfg,
             align_corners=False,
             loss_decode=dict(
-                type='CrossEntropyLoss', use_sigmoid=False, loss_weight=1.0)),
+                type='CrossEntropyLoss', 
+                use_sigmoid=False, 
+                loss_weight=1., 
+                # We can set a loss weight for each category
+                weight = (0.5 , 0.5, 1.3, 1.3, 1.4))),
         auxiliary_head=dict(
             type='FCNHead',
             in_channels=1024,
@@ -84,8 +88,55 @@ Let's take OrgSegNet.py as an example
             norm_cfg=norm_cfg,
             align_corners=False,
             loss_decode=dict(
-                type='CrossEntropyLoss', use_sigmoid=False, loss_weight=0.4)),
+                type='CrossEntropyLoss', 
+                use_sigmoid=False, 
+                loss_weight=0.4, 
+                # We can set a loss weight for each category
+                weight = (0.5, 0.5, 1.3, 1.3, 1.4))),
         # model training and testing settings
         train_cfg=dict(),
-        test_cfg=dict(mode='whole'))
+        test_cfg=dict(mode='slide', crop_size=(512, 512) ,stride=(256, 256)))
+        # test_cfg=dict(mode='whole'))
     ```
+
+    In OrgSegNet, we choose the _slide_ mode for training and inference, one can choose either _whole_ mode or _slide_ mode.
+
+
+## schedules config
+Early deep learning models generally used epoch to control the training flow, but our OrgSegNet and MMsegmentation recommend using iteration to define the training flow. Iteration control will be more flexible than epoch control, it should be noted that the two can be converted to each other.
+
+Let's see schedule_160k.py as an example.
+
+```
+# optimizer
+## We set SGD optimizer for model training
+optimizer = dict(type='SGD', lr=0.01, momentum=0.9, weight_decay=0.0005)
+optim_wrapper = dict(type='OptimWrapper', optimizer=optimizer, clip_grad=None)
+# learning policy
+param_scheduler = [
+    dict(
+        type='PolyLR',
+        eta_min=1e-4,
+        power=0.9,
+        begin=0,
+        end=160000,
+        by_epoch=False)
+]
+# training schedule for 160k
+train_cfg = dict(
+    type='IterBasedTrainLoop', max_iters=160000, val_interval=200)
+val_cfg = dict(type='ValLoop')
+test_cfg = dict(type='TestLoop')
+default_hooks = dict(
+    timer=dict(type='IterTimerHook'),
+    logger=dict(type='LoggerHook', interval=10, log_metric_by_epoch=False),
+    param_scheduler=dict(type='ParamSchedulerHook'),
+    # Save checkpoint every 200 interval
+    checkpoint=dict(type='CheckpointHook', by_epoch=False, interval=200),
+    # Early Stop, monitor can be loss, mIoU, Fscore ...
+    early_stop = dict(type='EarlyStoppingHook', monitor='mIoU', patience=1000),
+    sampler_seed=dict(type='DistSamplerSeedHook'),
+    visualization=dict(type='SegVisualizationHook'))
+
+```
+
