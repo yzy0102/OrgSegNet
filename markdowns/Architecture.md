@@ -20,7 +20,7 @@ Under the demo folder, we provide various demos to realize all the functions men
 - [How to generate instances of individual organelles based CAM](../demo/InstanceGenerate.ipynb)
 - [How to extract morphological characteristics of plant organelles (same function as web version)](../demo/PlantOrganelleHunterWebImplementation.ipynb)
 
-## Code architecture
+## Code architecture and guides
 - configs: The structure and parameters of the model are saved. Guide see [how to modify config](ArchGuide/HowToModifyConfig.md)
 - demo: Demos of OrgSegNet
 - markdowns: Some OrgSegNet usage tutorials
@@ -31,5 +31,5 @@ Under the demo folder, we provide various demos to realize all the functions men
 - utils: some important functions for extract morphological characteristics of plant organelles
 - README.md: General Guidance Document.
 
-## Code 
+
 
