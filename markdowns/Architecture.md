@@ -21,8 +21,8 @@ Under the demo folder, we provide various demos to realize all the functions men
 - [How to extract morphological characteristics of plant organelles (same function as web version)](../demo/PlantOrganelleHunterWebImplementation.ipynb)
 
 ## Code architecture and guides
-- configs: The structure and parameters of the model are saved. Guide see [how to modify config](ArchGuide/HowToModifyConfig.md)
-- demo: Demos of OrgSegNet
+- configs: The structure and parameters of the model are saved. Guide see [how to modify config](ArchGuide/HowToModifyConfig.md).
+- demo: Demos of OrgSegNet. Demo guides see [how to run demos](ArchGuide/HowToRunDemo.md).
 - markdowns: Some OrgSegNet usage tutorials
 - mmseg: Some important components of MMsegmentation and OrgSegNet
 - mmseg: Some important components of MMsegmentation and OrgSegNet
