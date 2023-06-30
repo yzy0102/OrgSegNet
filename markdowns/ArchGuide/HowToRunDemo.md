@@ -47,3 +47,8 @@ You can get the segmentation result of the image, the example result of the orga
 
 What needs to be input is only the image and the scale of the image, and the parameters that need to be adjusted are only the threshold required for post-processing.
 
+
+## 6. Other demos
+We provide a demo to show the difference between ISA and SA [ISA and SA.ipynb](../../demo/ISA%20and%20SA.ipynb). 
+
+We provide a demo to calculate the inference time [Calculate_inference_Time_Cost.ipynb](../../demo/Calculate_Inference_Time_Cost.ipynb). 
