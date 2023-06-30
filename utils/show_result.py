@@ -1,7 +1,9 @@
 import numpy as np
 from PIL import Image
 def show_result(result, old_img):
-
+    """
+    Show the segmentation result from OrgSegNet
+    """
     result = result.reshape([512, 768])
     w, h = np.array(old_img).shape[0], np.array(old_img).shape[1]
     seg_img = np.zeros((512, 768, 3))
