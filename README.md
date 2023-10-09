@@ -76,4 +76,3 @@ Please cite the following paper when using OrgSegNet:
 ```
 Feng, X., Yu, Z., Fang, H. et al. Plantorganelle Hunter is an effective deep-learning-based method for plant organelle phenotyping in electron microscopy. Nat. Plants (2023). https://doi.org/10.1038/s41477-023-01527-5
 ```
-Citation information will be updated after the paper is published.
