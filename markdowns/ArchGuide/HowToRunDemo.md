@@ -20,13 +20,21 @@ The dataset used for fine-tune does not need to be particularly complex, e.g., f
 ## 3. Run inference demo
 An inference demo was added to [inference_demo.ipynb](../../demo/inference_demo.ipynb). You can load your trained model _(checkpoint)_ or the pre-trained model officially provided by OrgSegNet. 
 
-The pretrained checkpoint can be downloaded from the [google drive link](https://drive.google.com/file/d/12TYv8mEUWdVqjrfbrKZK_OtcV5pq6ejr/view?usp=drive_link), 
-or run this code below:
-```
-!mkdir ../checkpoints
-!wget https://drive.google.com/file/d/12TYv8mEUWdVqjrfbrKZK_OtcV5pq6ejr/view?usp=drive_link -P ../checkpoints
+~~The pretrained checkpoint can be downloaded from the [google drive link](https://drive.google.com/file/d/12TYv8mEUWdVqjrfbrKZK_OtcV5pq6ejr/view?usp=drive_link), 
+or run this code below:~~
+
+<b>The pretrained checkpoint can be downloaded from the [zonodo link](https://doi.org/10.5281/zenodo.8419877).</b>
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.8419877.svg)](https://doi.org/10.5281/zenodo.8419877)
+
+
 
 ```
+!mkdir ../checkpoints
+!wget https://doi.org/10.5281/zenodo.8419877 -P ../checkpoints
+```
+
+
 
 Make sure that the environment is set up correctly. In the inference process, the performance requirements for the CPU and GPU are low. You can use a CPU for inference, and using a GPU for inference will speed up the process.
 
