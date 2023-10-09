@@ -74,6 +74,6 @@ OrgSegNet is built on the [MMCV](https://github.com/open-mmlab/mmcv.git) and [MM
 # <div id ='license'> License. </div>
 Please cite the following paper when using OrgSegNet:
 ```
-Xuping Feng, Zeyu Yu, Hui Fang et al. Plantorgan hunter: a deep learning-based framework for quantitative profiling plant subcellular morphology, 12 July 2022, PREPRINT (Version 1) available at Research Square [https://doi.org/10.21203/rs.3.rs-1811819/v1]
+Feng, X., Yu, Z., Fang, H. et al. Plantorganelle Hunter is an effective deep-learning-based method for plant organelle phenotyping in electron microscopy. Nat. Plants (2023). https://doi.org/10.1038/s41477-023-01527-5
 ```
 Citation information will be updated after the paper is published.
