@@ -23,16 +23,14 @@ An inference demo was added to [inference_demo.ipynb](../../demo/inference_demo.
 ~~The pretrained checkpoint can be downloaded from the [google drive link](https://drive.google.com/file/d/12TYv8mEUWdVqjrfbrKZK_OtcV5pq6ejr/view?usp=drive_link), 
 or run this code below:~~
 
+
 <b>The pretrained checkpoint can be downloaded from the [zonodo link](https://doi.org/10.5281/zenodo.8419877).</b>
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.8419877.svg)](https://doi.org/10.5281/zenodo.8419877)
 
 
 
-```
-!mkdir ../checkpoints
-!wget https://doi.org/10.5281/zenodo.8419877 -P ../checkpoints
-```
+
 
 
 
